@@ -5,7 +5,7 @@
       {% for note in user.notes %} <!--for each note in db associated with user -->
       <li class="list-group-item">
         {{ note.data }}
-        <button type="button" class="close" onClick="deleteNote({{ note.id }})"> <!--delete notes button-->
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})"> <!--delete notes button. Ignore the red, vscode thinks this is valid HTML and not a jinja2 templates-->
           <span aria-hidden="true">&times;</span>
         </button>
       </li>
