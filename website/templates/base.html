@@ -41,6 +41,7 @@
       </div>
     </nav>
 
+    <!--Below lines are used to make message flashing work(ie messages from auth methods)-->
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %} {% for category, message in messages %} {% if category ==
     'error' %}
