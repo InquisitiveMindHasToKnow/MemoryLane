@@ -60,7 +60,7 @@ def login():
 
 
 @auth.route('/logout')
-@login_required
+@login_required #decorator that says you can't access this page/route unless logged in. 
 def logout():
     logout_user()
     return redirect(url_for('auth.login'))

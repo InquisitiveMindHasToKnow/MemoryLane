@@ -32,9 +32,10 @@ def create_app():
         db.create_all()
 
     login_manager = LoginManager()
-    login_manager.login_view = 'auth.login'
+    login_manager.login_view = 'auth.login' #where should flask redirect us if user isnt logged in 
     login_manager.init_app(app)
 
+    # telling flask how to load a user. Looking for user model, referencing them by id
     @login_manager.user_loader
     def load_user(id):
         return User.query.get(int(id))
